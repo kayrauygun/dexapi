@@ -25,11 +25,14 @@ class dexAPI:
             request = self.session.post("https://graphql.bitquery.io/", json=self.query, headers=self.headers)
         except Exception:
             raise dexAPIError("Can't connect to API. Check your internet connection.")
-        if request.status_code == 403:
+        try:
+            if request.status_code == 403:
+                raise dexAPIError(f"API Key is not valid. Check your key.")
+            elif "errors" in request.json():
+                raise dexAPIError(request.json()["errors"][0]["message"])
+            return request.json()
+        except:
             raise dexAPIError(f"API Key is not valid. Check your key.")
-        elif "errors" in request.json():
-            raise dexAPIError(request.json()["errors"][0]["message"])
-        return request.json()
 
     def __time_to_str(self, start, time):
         if start:
