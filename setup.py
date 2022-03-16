@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setuptools.setup(
     name="dexapi",
-    version="0.1.1",
+    version="0.1.2",
     author="Kayra Uygun",
     author_email="kayrauygun@gmail.com",
     description="Python wraper for bitquery.io DEX API",
