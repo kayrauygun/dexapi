@@ -21,7 +21,7 @@ api = dexapi.dexAPI("API_KEY", network="NETWORK_NAME")
 Available networks are "ethereum" and "bsc".
 
 ### List of Exchanges
-`get_exchanges` function returns DEXs with highest volume (in USD)  in network between two datetimes.
+`get_exchanges` function returns DEXs with the highest volume (in USD)  in network between two datetimes.
 ```python
 dexapi.dexAPI.get_exchanges(start_time, end_time, limit)
 ```
@@ -50,7 +50,7 @@ api = dexapi.dexAPI("API_KEY", network="ethereum")
 api.get_exchanges("2022-03-01", "2022-03-15", 20 )
 ```
 ### List of Pairs
-`get_pairs` function returns pairs with highest volume (in USD) in the DEX between two datetimes.
+`get_pairs` function returns pairs with the highest volume (in USD) in the DEX between two datetimes.
 ```python
 dexapi.dexAPI.get_pairs(exchange_address, start_time, end_time, limit)
 ```
