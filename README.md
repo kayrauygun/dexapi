@@ -35,7 +35,7 @@ if hours, minutes, seconds are not specified it will be taken as 23:59:59*
 
 `limit`: *int, optional, default = 20, maximum number of entries function returns*
 
-`return`:* dataframe, columns = [
+`return`: * dataframe, columns = [
         "exchange": DEX name,
         "protocol": protocol DEX uses,
         "count": number of trades,
@@ -120,7 +120,7 @@ api.get_trades("0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640", "2022-03-15", "2022
 ```python
 dexapi.dexAPI.get_balances(address, time)
 ```
-`address`: *str, address of the smart contract on network
+`address`: *str, address of the smart contract on network*
 
 `time`: *str | datetime, optional, default = now, format = "YYYY-MM-DD",
 datetime.date(YYYY,MM,DD), "YYYY-MM-DDTHH:MM:SS" (ISO8601DateTime), datetime.datetime(YYYY,MM,DD,HH,MM,SS),
