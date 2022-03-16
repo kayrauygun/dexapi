@@ -268,12 +268,12 @@ class dexAPI:
 
     def get_balances(self, address, time=datetime.datetime.now()):
         """
-        Class function returns most recent trades use the smart contract between two times.
+        Class function returns the balance of the smart contract address at a specific time.
 
         :param address: str, address of pair on network
         :param time: str | datetime, optional, default = now, format = "YYYY-MM-DD",
         datetime.date(YYYY,MM,DD), "YYYY-MM-DDTHH:MM:SS" (ISO8601DateTime), datetime.datetime(YYYY,MM,DD,HH,MM,SS),
-        if hours, minutes, seconds are not specified it will be taken as 23:59:59s
+        if hours, minutes, seconds are not specified it will be taken as 23:59:59
 
         :return: dataframe, columns = [
         "currency": currency symbol,
